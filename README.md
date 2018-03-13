@@ -1,24 +1,20 @@
 ### Task 1 (If-else Statement)
-Given an integer, , perform the following conditional actions:
+Given an integer, N, perform the following conditional actions:
 
-If  is odd, print Weird
-If  is even and in the inclusive range of  to , print Not Weird
-If  is even and in the inclusive range of  to , print Weird
-If  is even and greater than , print Not Weird
-Input Format
+- If N is odd, print Weird
+- If N is even and in the inclusive range of 2 to 5, print Not Weird
+- If N is even and in the inclusive range of 6 to 20, print Weird
+- If N is even and greater than 20, print Not Weird
 
-A single line containing a positive integer, .
+**Input Format:** A single line containing a positive integer, N.
+**Constraints:** 1 <= n <=100
+**Output Format:** Print Weird if the number is weird; otherwise, print Not Weird.
 
-Constraints
-
-Output Format
-
-Print Weird if the number is weird; otherwise, print Not Weird.
+**Answer:**
 ```
 if __name__ == '__main__':
     n = int(raw_input())
     if n >= 1 and n<=100:
-        # If n is odd, print Weird
         if n%2 != 0:
             print "Weird"
         else:
@@ -57,29 +53,20 @@ Constraints
  ```
 
 ### Task 3 (Division)
-Read two integers and print two lines. The first line should contain integer division,  // . The second line should contain float division,  / .
+Read two integers and print two lines. The first line should contain integer division, a/b . The second line should contain float division, a/b. You don't need to perform any rounding or formatting operations.
 
-You don't need to perform any rounding or formatting operations.
+**Input Format:** The first line contains the first integer. The second line contains the second integer, .
+**Output Format:** Print the two lines as described above.
 
-Input Format
-
-The first line contains the first integer, . The second line contains the second integer, .
-
-Output Format
-
-Print the two lines as described above.
-
-Sample Input 0
-```
+**Sample Input:**
 4
 3
-```
-Sample Output 0
-```
+
+**Sample Output:**
 1
 1.33333333333
-```
 
+**Answer:**
 ```
 from __future__ import division
 if __name__ == '__main__':
@@ -92,19 +79,12 @@ if __name__ == '__main__':
 ### Task 4 (Loops)
 Read an integer N. For all non-negative integers i < N, print (<i>i</i>)<sup>2</sup>. See the sample for details.
 
-**Input Format**
-The first and only line contains the integer, N.
+**Input Format:** The first and only line contains the integer, N.
+**Constraints:** 1 <= N <= 20
+**Output Format:** Print N lines, one corresponding to each .
 
-**Constraints**
-1 <= N <= 20
-
-**Output Format**
-Print N lines, one corresponding to each .
-
-**Sample Input 0**
-`5`
-
-**Sample Output 0**
+**Sample Input:** `5`
+**Sample Output:**
 ```
 0
 1
@@ -123,36 +103,19 @@ if __name__ == '__main__':
 ```
 
 ### Task 5 (function)
-We add a Leap Day on February 29, almost every four years. The leap day is an extra, or intercalary day and we add it to the shortest month of the year, February. 
-In the Gregorian calendar three criteria must be taken into account to identify leap years:
+write a function that takes a variable "year" and returns True/False if it is leap year or not.
 
-The year can be evenly divided by 4, is a leap year, unless:
-The year can be evenly divided by 100, it is NOT a leap year, unless:
-The year is also evenly divisible by 400. Then it is a leap year.
-This means that in the Gregorian calendar, the years 2000 and 2400 are leap years, while 1800, 1900, 2100, 2200, 2300 and 2500 are NOT leap years.Source
+**How to know if it's a leap year:**
+- The year can be evenly divided by 4, is a leap year, unless:
+- The year can be evenly divided by 100, it is NOT a leap year, unless:
+- The year is also evenly divisible by 400. Then it is a leap year.
 
-Task 
-You are given the year, and you have to write a function to check if the year is leap or not.
+**Input Format:** 4 digits year
+**Constraints:** year >= 1900 and year <= pow(10, 5):
+**Output Format:** Your function must return a boolean value (True/False)
 
-Note that you have to complete the function and remaining code is given as template.
-
-Input Format
-
-Read y, the year that needs to be checked.
-
-Constraints
-
-
-Output Format
-
-Output is taken care of by the template. Your function must return a boolean value (True/False)
-
-Sample Input 0
-
-1990
-Sample Output 0
-
-False
+**Sample Input:** 1990
+**Sample Output:** False
 
 **Answer:**
 ```
@@ -170,4 +133,24 @@ def is_leap(year):
                     leap = True
     
     return leap
+```
+
+### Task 6
+Read an integer N. Without using any string methods, try to print the following:
+
+**Input Format** an integer "n".
+**Output Format** ex:12345......n
+
+**Sample Input:** 3
+**Sample Output:** 123
+
+**Answer:**
+```
+if __name__ == '__main__':
+    n = int(raw_input())
+    i = 2
+    str = '1'
+    for i in xrange (i, n+1):
+        str += `i`
+    print (str) 
 ```
