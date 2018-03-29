@@ -179,3 +179,13 @@ def count_print_unique_words(str):
     for i in sorted_list:
         print "%s - %s" % (i, words_list.count(i))
 ```
+
+### Task 9 (You are given an immutable string, and you want to make changes to it)
+```
+def mutate_string(string, position, character):
+    l = list(string)
+    l[position] = character
+    string = ''.join(l)
+    return string
+```
+
