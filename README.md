@@ -154,3 +154,28 @@ if __name__ == '__main__':
         str += `i`
     print (str) 
 ```
+
+### Task 7 (swap case)
+You are given a string and your task is to swap cases. In other words, convert all lowercase letters to uppercase letters and vice versa.
+
+For Example:
+DaVId → dAviD
+Pythonist 2 → pYTHONIST 2
+
+```
+def swap_case(s):
+    if len(s) > 0 and len(s) <= 1000: 
+        x = s.swapcase()
+        return x
+```
+
+### Task 8 (count and print unique words in a string)
+```
+def count_print_unique_words(str):
+    words_list = str.split()
+    words_list = [x.lower() for x in words_list]
+    unique_list = list(set(words_list))
+    sorted_list = sorted(unique_list)
+    for i in sorted_list:
+        print "%s - %s" % (i, words_list.count(i))
+```
